@@ -1,9 +1,10 @@
 'use strict'
 const Url = require('url-parse')
-const CLEARDB_DATABASE_URL = new Url(Env.get('CLEARDB_DATABASE_URL')) 
-host: Env.get('DB_HOST', CLEARDB_DATABASE_URL.host), port: Env.get('DB_PORT', ''), user: Env.get('DB_USER', CLEARDB_DATABASE_URL.username), password: Env.get('DB_PASSWORD', CLEARDB_DATABASE_URL.password), database: Env.get('DB_DATABASE', CLEARDB_DATABASE_URL.pathname.substr(1)) 
+
 /** @type {import('@adonisjs/framework/src/Env')} */
 const Env = use('Env')
+
+const CLEARDB_DATABASE_URL = new Url(Env.get('CLEARDB_DATABASE_URL'))
 
 /** @type {import('@adonisjs/ignitor/src/Helpers')} */
 const Helpers = use('Helpers')
@@ -58,7 +59,11 @@ module.exports = {
       // user: Env.get('DB_USER', 'root'),
       // password: Env.get('DB_PASSWORD', ''),
       // database: Env.get('DB_DATABASE', 'adonis')
-        Env.get('DB_HOST', CLEARDB_DATABASE_URL.host), port: Env.get('DB_PORT', ''), user: Env.get('DB_USER', CLEARDB_DATABASE_URL.username), password: Env.get('DB_PASSWORD', CLEARDB_DATABASE_URL.password), database: Env.get('DB_DATABASE', CLEARDB_DATABASE_URL.pathname.substr(1)) 
+      host: Env.get('DB_HOST', CLEARDB_DATABASE_URL.host),
+    port: Env.get('DB_PORT', ''),
+    user: Env.get('DB_USER', CLEARDB_DATABASE_URL.username),
+    password: Env.get('DB_PASSWORD', CLEARDB_DATABASE_URL.password),
+    database: Env.get('DB_DATABASE', CLEARDB_DATABASE_URL.pathname.substr(1))
 
     },
     debug: Env.get('DB_DEBUG', false)
