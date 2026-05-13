@@ -1,28 +1,39 @@
-# Adonis API application
+﻿# Hcodelab Server
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+> Servidor backend do projeto HcodeLab construido com AdonisJS 4, gerenciando autenticacao JWT, usuarios e dados do sistema.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+## Stack
 
-## Setup
+- AdonisJS 4
+- MySQL
 
-Use the adonis command to install the blueprint
+## Prerequisitos
+
+- Node.js v14+
+- MySQL
+
+## Como executar
 
 ```bash
-adonis new yardstick --api-only
+# Clone o repositorio
+git clone https://github.com/meirelesdev/hcodelab-server.git
+cd hcodelab-server
+
+# Instale as dependencias
+npm install
+
+# Configure as variaveis de ambiente
+cp .env.example .env
+# Edite o arquivo .env com suas configuracoes
+
+# Inicie a aplicacao
+npm start
 ```
 
-or manually clone the repo and then run `npm install`.
+## Licenca
 
+Este projeto esta sob a licenca MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-### Migrations
+---
 
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+Desenvolvido por [meirelesdev](https://github.com/meirelesdev/hcodelab-server)
